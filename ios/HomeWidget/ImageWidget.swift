@@ -77,9 +77,9 @@ struct ImageWidgetProvider: IntentTimelineProvider {
             entries.append(entry)
             completion(Timeline(entries: entries, policy: .atEnd))
             //For debug use
-//            Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
-//                WidgetCenter.shared.reloadTimelines(ofKind: ImageWidget.kind)
-//            }
+            Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
+                WidgetCenter.shared.reloadTimelines(ofKind: ImageWidget.kind)
+            }
         }
     }
 }

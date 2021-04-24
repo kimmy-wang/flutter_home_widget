@@ -16,12 +16,6 @@ void main() async {
   runApp(MyApp());
 }
 
-/// Main for UI Widget.
-@pragma('vm:entry-point')
-void uiWidgetMain() {
-  runApp(UIWidgetApp());
-}
-
 /// Main for Image Widget.
 @pragma('vm:entry-point')
 void imageWidgetMain() async {
@@ -283,62 +277,4 @@ void _drawWidgetCanvas(Canvas canvas, Rect rect, Color color, String text) {
   var tpTail = TextPainter(text: spanTail, textDirection: TextDirection.ltr);
   tpTail.layout();
   tpTail.paint(canvas, Offset(0, rect.height * 2 / 3));
-}
-
-class UIWidgetApp extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() => UIWidgetState();
-}
-
-class UIWidgetState extends State<UIWidgetApp> {
-  String time = '';
-
-  UIWidgetState() {
-    _widgetChannel.setMethodCallHandler((call) async {
-      if (call.method == 'drawWidget') {
-        RenderRepaintBoundary boundary = context.findRenderObject();
-        var image = await boundary.toImage(pixelRatio: call.arguments['scale']);
-        var byteData = await image.toByteData(format: ImageByteFormat.rawRgba);
-        print(byteData.lengthInBytes);
-        return byteData.buffer.asUint8List();
-      }
-      return 0;
-    });
-
-    Timer.periodic(Duration(seconds: 1), (timer) {
-      var local = DateTime.now().toLocal();
-      setState(() {
-        time = '${local.hour}:${local.minute}:${local.second}';
-      });
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return RepaintBoundary(
-        child: MaterialApp(
-          // debugShowCheckedModeBanner: false,
-            themeMode: ThemeMode.system,
-            theme: ThemeData(
-                primarySwatch: Colors.red, brightness: Brightness.light),
-            darkTheme: ThemeData(
-                primarySwatch: Colors.blue, brightness: Brightness.dark),
-            builder: (context, child) => Container(
-                constraints: BoxConstraints.expand(),
-                color: Colors.white54,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      time,
-                      style: Theme.of(context).textTheme.subtitle1.copyWith(
-                          color: Theme.of(context).colorScheme.primary),
-                    ),
-                    ElevatedButton(child: Text('Click'), onPressed: () {}),
-                    Text('Flutter UI Widget',
-                        style: Theme.of(context).textTheme.subtitle1.copyWith(
-                            color: Theme.of(context).colorScheme.primary)),
-                  ],
-                ))));
-  }
 }

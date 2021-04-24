@@ -19,7 +19,6 @@ struct HomeWidget: WidgetBundle {
         ImageWidget()
         #if os(iOS)
         ImageUIWidget()
-        UIWidget()
         #endif
     }
 }

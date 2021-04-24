@@ -16,7 +16,6 @@
 		2E3BF4272633BF7A00A0556C /* HomeWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 2E3BF4222633BF7800A0556C /* HomeWidget.intentdefinition */; };
 		2E3BF42A2633BF7A00A0556C /* HomeWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2E3BF4192633BF7800A0556C /* HomeWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2E3BF4342633BFD500A0556C /* ImageWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3BF4312633BFD500A0556C /* ImageWidget.swift */; };
-		2E3BF4352633BFD500A0556C /* UIWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3BF4322633BFD500A0556C /* UIWidget.swift */; };
 		2E3BF4362633BFD500A0556C /* ImageUIWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3BF4332633BFD500A0556C /* ImageUIWidget.swift */; };
 		2E3BF43B2633C00A00A0556C /* FlutterNative.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2E3BF4392633C00A00A0556C /* FlutterNative.mm */; };
 		2E3BF4632633C3CC00A0556C /* Demo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3BF4622633C3CC00A0556C /* Demo.swift */; };
@@ -90,7 +89,6 @@
 		2E3BF4232633BF7A00A0556C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E3BF4252633BF7A00A0556C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E3BF4312633BFD500A0556C /* ImageWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageWidget.swift; sourceTree = "<group>"; };
-		2E3BF4322633BFD500A0556C /* UIWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWidget.swift; sourceTree = "<group>"; };
 		2E3BF4332633BFD500A0556C /* ImageUIWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUIWidget.swift; sourceTree = "<group>"; };
 		2E3BF4382633C00900A0556C /* HomeWidgetExtension-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HomeWidgetExtension-Bridging-Header.h"; sourceTree = "<group>"; };
 		2E3BF4392633C00A00A0556C /* FlutterNative.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FlutterNative.mm; sourceTree = "<group>"; };
@@ -182,7 +180,6 @@
 				2E3BF4202633BF7800A0556C /* HomeWidget.swift */,
 				2E3BF4332633BFD500A0556C /* ImageUIWidget.swift */,
 				2E3BF4312633BFD500A0556C /* ImageWidget.swift */,
-				2E3BF4322633BFD500A0556C /* UIWidget.swift */,
 				2E3BF43A2633C00A00A0556C /* FlutterInternal.hpp */,
 				2E3BF4392633C00A00A0556C /* FlutterNative.mm */,
 				2E3BF4222633BF7800A0556C /* HomeWidget.intentdefinition */,
@@ -568,7 +565,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E3BF4352633BFD500A0556C /* UIWidget.swift in Sources */,
 				2E3BF4212633BF7800A0556C /* HomeWidget.swift in Sources */,
 				2E3BF43B2633C00A00A0556C /* FlutterNative.mm in Sources */,
 				2E3BF5B42633E34C00A0556C /* GeneratedPluginRegistrant.m in Sources */,
